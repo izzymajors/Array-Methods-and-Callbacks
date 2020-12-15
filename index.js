@@ -23,8 +23,8 @@ Use getFinals to do the following:
 hint - you should be looking at the stage key inside of the objects
 */
 
-function getFinals() {
-
+function getFinals(data) {
+return data.filter( obj => obj.Stage === "Final");
 }
 
 
@@ -36,7 +36,7 @@ Use the higher-order function called getYears to do the following:
 3. Return an array called years containing all of the years in the getFinals data set*/
 
 function getYears(arr , cb ) {
-    let years = arr.map( cb => cb.year);
+    let years = arr.map( cb => cb.years);
     return years;
 }
 
@@ -89,9 +89,10 @@ Use the higher order function getAverageGoals to do the following:
 */
 
 function getAverageGoals(cb) {
-  // let average = cb.reduce(counter,item) => counter +(item["home Team Goals"] + item["Away Team Goals"]),0)/cb.length;
-  // return average.toPrecision(3);
+   let average = cb.reduce((counter,item) => counter + (item["home Team Goals"] + item["Away Team Goals"]),0) / cb.length;
+   return average.toPrecision(3);
 }
+
 
 
 
