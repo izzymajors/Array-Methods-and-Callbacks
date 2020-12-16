@@ -36,9 +36,9 @@ Use the higher-order function called getYears to do the following:
 3. Return an array called years containing all of the years in the getFinals data set*/
 
 function getYears( arr , cb ) {
-    let years = arr.map( cb => callback.year);
+    let years = arr.map( cb => cb.Year );
     return years;
-}
+} 
 
 
 
